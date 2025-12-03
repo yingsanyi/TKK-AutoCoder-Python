@@ -4,52 +4,6 @@ import { CodeBlock } from '../../components/CodeBlock';
 
 export const pythonTools: Section[] = [
   {
-    id: 'py-numpy',
-    category: '数据分析与可视化',
-    group: '2. 核心工具库',
-    title: '2.1 NumPy 数组计算',
-    type: 'lesson',
-    content: (
-      <div className="space-y-6">
-        <p className="text-lg text-slate-700">
-            <strong>NumPy</strong> 是 Python 科学计算的基石。它的核心是 <code>ndarray</code>（N维数组）。
-        </p>
-
-        <div>
-            <h3 className="text-xl font-bold text-slate-900 mb-2">1. 创建数组</h3>
-            <CodeBlock code={`import numpy as np
-
-a = np.array([1, 2, 3])                 # 一维
-b = np.array([[1, 2, 3], [4, 5, 6]])    # 二维
-
-print(a.shape)  # (3,)
-print(b.shape)  # (2, 3)`} />
-        </div>
-
-        <div>
-            <h3 className="text-xl font-bold text-slate-900 mb-2">2. 向量化运算 (重点)</h3>
-            <p className="text-slate-600 mb-2">
-                NumPy 允许你像操作单个数字一样操作整个数组，无需写 for 循环。
-            </p>
-            <CodeBlock code={`a = np.array([1, 2, 3])
-b = np.array([10, 20, 30])
-
-print(a + b)        # [11 22 33]
-print(a * b)        # [10 40 90]
-print(np.sqrt(a))   # [1. 1.414 1.732]`} />
-        </div>
-
-        <div>
-            <h3 className="text-xl font-bold text-slate-900 mb-2">3. 切片与索引</h3>
-            <CodeBlock code={`arr = np.arange(10)  # [0, 1, ..., 9]
-
-print(arr[3:7])    # [3 4 5 6]
-print(arr[::-1])   # 倒序 [9 8 ... 0]`} />
-        </div>
-      </div>
-    )
-  },
-  {
     id: 'py-pandas',
     category: '数据分析与可视化',
     group: '2. 核心工具库',

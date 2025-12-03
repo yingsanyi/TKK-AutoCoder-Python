@@ -340,10 +340,39 @@ y = np.sin(x)
 plt.plot(x, y)
 plt.title("My First Plot")
 plt.show()`} />
-                    <div className="mt-4 bg-white p-4 border border-slate-200 rounded-lg shadow-sm flex items-center justify-center h-48 bg-slate-50">
-                        <span className="text-slate-400 italic flex items-center gap-2">
-                             <Check size={16} /> 图表将在此处显示 (正弦波)
-                        </span>
+                    
+                    <div className="mt-4 flex flex-col items-center bg-white p-4 border border-slate-200 rounded-lg shadow-sm">
+                        <img 
+                            src="/assets/images/generated/viz_sin_wave.png" 
+                            alt="Sin Wave Plot" 
+                            className="w-full max-w-[500px] rounded border border-slate-100"
+                        />
+                        <p className="text-xs text-slate-400 mt-2">运行结果示意图</p>
+                    </div>
+
+                    <div className="bg-slate-50 p-4 rounded-lg border border-slate-200 mt-4">
+                        <h4 className="font-bold text-slate-800 mb-3 flex items-center gap-2">
+                            <span className="w-5 h-5 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center text-xs">i</span>
+                            代码逐行解析
+                        </h4>
+                        <ul className="space-y-3 text-sm text-slate-600">
+                            <li className="flex gap-2">
+                                <code className="text-indigo-600 font-bold shrink-0">import ... as ...</code>
+                                <span>导入库并起个“外号”（别名）。<code>np</code> 和 <code>plt</code> 是全球通用的标准别名，千万别乱改哦！</span>
+                            </li>
+                            <li className="flex gap-2">
+                                <code className="text-indigo-600 font-bold shrink-0">np.linspace(0, 10, 100)</code>
+                                <span><strong>生成数据</strong>。这句话的意思是：“在 0 到 10 之间，均匀地切出 100 个点”。这些点就是 X 轴的坐标。</span>
+                            </li>
+                            <li className="flex gap-2">
+                                <code className="text-indigo-600 font-bold shrink-0">np.sin(x)</code>
+                                <span><strong>数学运算</strong>。NumPy 的强大之处在于，它可以一次性计算这 100 个点的正弦值，不需要写循环！</span>
+                            </li>
+                            <li className="flex gap-2">
+                                <code className="text-indigo-600 font-bold shrink-0">plt.plot(x, y)</code>
+                                <span><strong>画图</strong>。把 x 和 y 连成线。</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
